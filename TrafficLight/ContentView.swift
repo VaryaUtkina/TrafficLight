@@ -10,15 +10,15 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack(spacing: 30) {
-            Color.red
+            Color.red.opacity(0.5)
                 .frame(width: 125, height: 125)
                 .clipShape(Circle())
                 .shadow(radius: 10)
-            Color.yellow
+            Color.yellow.opacity(0.5)
                 .frame(width: 125, height: 125)
                 .clipShape(Circle())
                 .shadow(radius: 10)
-            Color.green
+            Color.green.opacity(0.5)
                 .frame(width: 125, height: 125)
                 .clipShape(Circle())
                 .shadow(radius: 10)
@@ -38,6 +38,10 @@ struct ContentView: View {
         .clipShape(.rect(cornerRadius: 15))
         .shadow(radius: 10)
         .padding(.bottom, 20)
+    }
+    
+    private func buttonTapped() {
+        
     }
 }
 
