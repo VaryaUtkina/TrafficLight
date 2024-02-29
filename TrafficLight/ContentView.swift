@@ -8,17 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    private let lightIsOn = 1.0
+    private let lightIsOff = 0.3
+    
     var body: some View {
         VStack(spacing: 30) {
-            Color.red.opacity(0.5)
+            Color.red.opacity(lightIsOff)
                 .frame(width: 125, height: 125)
                 .clipShape(Circle())
                 .shadow(radius: 10)
-            Color.yellow.opacity(0.5)
+            Color.yellow.opacity(lightIsOff)
                 .frame(width: 125, height: 125)
                 .clipShape(Circle())
                 .shadow(radius: 10)
-            Color.green.opacity(0.5)
+            Color.green.opacity(lightIsOff)
                 .frame(width: 125, height: 125)
                 .clipShape(Circle())
                 .shadow(radius: 10)
@@ -27,8 +30,8 @@ struct ContentView: View {
         
         Spacer()
         
-        Button(action: {} ) {
-            Text("Start")
+        Button(action: buttonTapped) {
+            Text("START")
                 .font(.largeTitle)
                 .fontWeight(.semibold)
         }
