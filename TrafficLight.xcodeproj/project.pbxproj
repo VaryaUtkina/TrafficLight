@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4885E9B62B9108FF00946BE0 /* TrafficLightApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4885E9B52B9108FF00946BE0 /* TrafficLightApp.swift */; };
-		4885E9B82B9108FF00946BE0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4885E9B72B9108FF00946BE0 /* ContentView.swift */; };
+		4885E9B82B9108FF00946BE0 /* TrafficLightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4885E9B72B9108FF00946BE0 /* TrafficLightView.swift */; };
 		4885E9BA2B91090300946BE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4885E9B92B91090300946BE0 /* Assets.xcassets */; };
 		4885E9BD2B91090300946BE0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4885E9BC2B91090300946BE0 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		4885E9B22B9108FF00946BE0 /* TrafficLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrafficLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4885E9B52B9108FF00946BE0 /* TrafficLightApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficLightApp.swift; sourceTree = "<group>"; };
-		4885E9B72B9108FF00946BE0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4885E9B72B9108FF00946BE0 /* TrafficLightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficLightView.swift; sourceTree = "<group>"; };
 		4885E9B92B91090300946BE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4885E9BC2B91090300946BE0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,7 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				4885E9B52B9108FF00946BE0 /* TrafficLightApp.swift */,
-				4885E9B72B9108FF00946BE0 /* ContentView.swift */,
+				4885E9B72B9108FF00946BE0 /* TrafficLightView.swift */,
 				4885E9B92B91090300946BE0 /* Assets.xcassets */,
 				4885E9BB2B91090300946BE0 /* Preview Content */,
 			);
@@ -137,7 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4885E9B82B9108FF00946BE0 /* ContentView.swift in Sources */,
+				4885E9B82B9108FF00946BE0 /* TrafficLightView.swift in Sources */,
 				4885E9B62B9108FF00946BE0 /* TrafficLightApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
