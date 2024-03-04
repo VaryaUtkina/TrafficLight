@@ -7,69 +7,52 @@
 
 import SwiftUI
 
+enum CurrentLight {
+    case off, red, yellow, green
+}
+
 struct TrafficLightView: View {
     @State private var buttonTitle = "START"
-    @State private var redOpacity = 0.3
-    @State private var yellowOpacity = 0.3
-    @State private var greenOpacity = 0.3
-    @State private var currentLight = CurrentLight.red
+    @State private var currentLight = CurrentLight.off
     
     private let lightIsOn = 1.0
     private let lightIsOff = 0.3
     
     var body: some View {
         VStack(spacing: 30) {
-            setupCircle(.red, redOpacity)
-            setupCircle(.yellow, yellowOpacity)
-            setupCircle(.green, greenOpacity)
+            ColorCircleView(
+                color: .red,
+                opacity: currentLight == .red ? 1 : 0.3
+            )
+            ColorCircleView(
+                color: .yellow,
+                opacity: currentLight == .yellow ? 1 : 0.3
+            )
+            ColorCircleView(
+                color: .green,
+                opacity: currentLight == .green ? 1 : 0.3
+            )
         }
         .padding(.top, 20)
         
         Spacer()
         
-        Button(action: buttonTapped) {
-            Text(buttonTitle)
-                .font(.largeTitle)
-                .fontWeight(.semibold)
+        StartButtonView(title: buttonTitle) {
+            if buttonTitle == "START" {
+                buttonTitle = "NEXT"
+            }
+            nextColor()
         }
-        .frame(width: 150, height: 50)
-        .background(.tint)
-        .foregroundStyle(.white)
-        .clipShape(.rect(cornerRadius: 15))
-        .shadow(radius: 10)
         .padding(.bottom, 20)
     }
     
-    private func buttonTapped() {
-        buttonTitle = "NEXT"
-        
+    private func nextColor() {
         switch currentLight {
-        case .red:
-            greenOpacity = lightIsOff
-            redOpacity = lightIsOn
-            currentLight = .yellow
-        case .yellow:
-            redOpacity = lightIsOff
-            yellowOpacity = lightIsOn
-            currentLight = .green
-        case .green:
-            yellowOpacity = lightIsOff
-            greenOpacity = lightIsOn
-            currentLight = .red
+        case .off: currentLight = .red
+        case .red: currentLight = .yellow
+        case .yellow: currentLight = .green
+        case .green: currentLight = .red
         }
-    }
-    
-    private func setupCircle(_ color: Color, _ opacity: Double) -> some View {
-        return Circle()
-            .frame(width: 125)
-            .foregroundStyle(color.opacity(opacity))
-            .shadow(radius: 10)
-    }
-}
-
-private extension TrafficLightView {
-    enum CurrentLight {
-        case red, yellow, green
     }
 }
 
